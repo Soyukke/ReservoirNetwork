@@ -1,0 +1,10 @@
+name = "ReservoirNetwork"
+uuid = "30f8a926-d560-40fd-9608-a5ffb80e522a"
+authors = ["soyukke <soyukke@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
