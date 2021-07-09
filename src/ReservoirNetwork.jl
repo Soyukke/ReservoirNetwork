@@ -65,10 +65,13 @@ end
 function example()
     inputs = collect(0:0.01:3)
     data = Float32.(sin.(2pi .* inputs))
-    inputstest = collect(0:0.01:10)
-    datatest = Float32.(sin.(2pi .* inputstest))
+    # inputstest = collect(0:0.01:10)
+    # datatest = Float32.(sin.(2pi .* inputstest))
     m = ReservoirNetwork.ReservoirNetWork(1, 1, 150; δ=0.1f0, η=0.1f0)
     
+    # train(m, inputs, data; λ=0.1f0)
+    # 入力 = 出力となるように学習
+    inputs = data
     train(m, inputs, data; λ=0.1f0)
 
     T = first(typeof(m.Wᵢ).parameters)
